@@ -1,0 +1,53 @@
+{
+    "name": "risingsun/laravel-google-android-publisher",
+    "description": "Laravel Google Android Publisher",
+    "keywords": [
+        "risingsun",
+        "laravel",
+        "Laravel Google Android Publisher"
+    ],
+    "homepage": "https://github.com/gaoxu529/laravel-google-android-publisher",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gaoxu",
+            "email": "gaoxu529@126.com",
+            "homepage": "https://www.bjestrata.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "google/apiclient": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "risingsun\\LaravelGoogleAndroidPublisher\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "risingsun\\LaravelGoogleAndroidPublisher\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "risingsun\\LaravelGoogleAndroidPublisher\\ServiceProvider\\LaravelGoogleAndroidPublisherServiceProvider"
+            ],
+            "aliases": {
+                "LaravelGoogleIndexing": "risingsun\\LaravelGoogleAndroidPublisher\\Facade\\LaravelGoogleAndroidPublisherFacade"
+            }
+        }
+    }
+}
